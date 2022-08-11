@@ -15,7 +15,7 @@ module.exports = {
       skipDryRun: true        // Skip dry run before migrations?
     },
     kardiachain_testnet: {
-      provider: () => new HDWalletProvider(mnemonic, `http://66.42.63.111:8546`),
+      provider: () => new HDWalletProvider(mnemonic, `https://dev.kardiachain.io`),
       network_id: "69",       // KardiaChain Testnet network id
       gas: 5500000,           // Default gas limit
       confirmations: 2,       // # of confs to wait between deployments. (default: 0)
@@ -27,7 +27,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.0",      // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.8.1",      // Fetch exact version from solc-bin (default: truffle's version)
       settings: {             // See the solidity docs for advice about optimization and evmVersion
         optimizer: {
           enabled: false,
