@@ -23,7 +23,7 @@ module.exports = {
       skipDryRun: true,       // Skip dry run before migrations? (default: false for public nets )
     }
   },
-
+ 
   // Configure your compilers
   compilers: {
     solc: {
