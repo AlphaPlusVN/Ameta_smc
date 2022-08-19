@@ -8,7 +8,8 @@ contract NFTItem is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     uint256 public constant TOTAL_SUPPLY = 10000;
-    constructor() ERC721("NFTItem", "ANFT") {}
+
+    constructor() ERC721("Ameta NFT ", "ANFT") {}
 
     function awardItem(address player, string memory tokenURI)
         public

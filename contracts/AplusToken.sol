@@ -6,24 +6,15 @@ contract AplusToken is ERC20 {
     address public owner = msg.sender;
     uint256 public last_completed_migration;
 
-    constructor() ERC20("APLUS Token", "APLUS") {
-        _mint(msg.sender, 1000 * 10 * 18);
+    constructor() ERC20("Ameta Token", "APLUS") {
+        _mint(msg.sender, 1*10**9*10**18);
         owner = msg.sender;
     }
-
-    function mint(address to, uint256 amount) external {
-        require(msg.sender == owner, "Only admin");
-        _mint(to, amount);
-    }
-
-    function burn(uint256 amount) external {
-        _burn(msg.sender, amount);
-    }
-
+    
     modifier restricted() {
         require(
             msg.sender == owner,
-            "This function is restricted to the contract's owner"
+            "This function is restricted to the contract's owner" 
         );
         _;
     }
